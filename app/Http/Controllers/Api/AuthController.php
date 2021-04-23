@@ -9,6 +9,56 @@ use Hash;
 use App\User;
 use Auth;
 
+
+/**
+ * @OA\Post(
+ *      path="/register",
+ *      operationId="register a user",
+ *      tags={"Set Role"},
+ *      summary="Create login credentials",
+ *      description="Returns list of projects",
+ *           @OA\Parameter(
+ *          name="name",
+ *          description="Fullname",
+ *          required=true,
+ *          in="path",
+ *          @OA\Schema(
+ *              type="integer"
+ *          )
+ *      ),
+*           @OA\Parameter(
+ *          name="email",
+ *          description="Fullname",
+ *          required=true,
+ *          in="path",
+ *          @OA\Schema(
+ *              type="integer"
+ *          )
+ *      ),
+*           @OA\Parameter(
+ *          name="password",
+ *          description="Fullname",
+ *          required=true,
+ *          in="path",
+ *          @OA\Schema(
+ *              type="integer"
+ *          )
+ *      ),
+ *      @OA\Response(
+ *          response=200,
+ *          description="successful operation"
+ *       ),
+ *       @OA\Response(response=400, description="Bad request"),
+ *       security={
+ *           {"api_key_security_example": {}}
+ *       }
+ *     )
+ *
+ * Returns token
+ */
+
+
+
 class AuthController extends Controller
 {
     public function login(Request $request)
